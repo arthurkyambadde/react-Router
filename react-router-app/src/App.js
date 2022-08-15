@@ -7,6 +7,7 @@ import { New } from "./components/New";
 import { NoMatch } from "./components/NoMatch";
 import { OrderSummary } from "./components/OrderSummarry";
 import { Products } from "./components/Products";
+import { UserDetails } from "./components/UserDetails";
 import { Users } from "./components/Users";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           </Route>
         </Route>
         <Route path="users" element={<Users />}>
-          Users
+          <Route path="users/:userId" element={<UserDetails />}></Route>
         </Route>
       </Routes>
     </div>
